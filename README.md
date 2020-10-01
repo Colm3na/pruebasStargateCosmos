@@ -15,7 +15,7 @@ alias gaia="/home/USER/gaia/build/gaiad"
 
 > Si obtenemos un error parecido a [este](https://github.com/Kava-Labs/kava/issues/656) necesitamos instalar `build-essential` con `sudo apt install -y build-essential`.
 
-### [Grupo](https://t.me/Cosmos_Stargate) de Telegram de anuncios de Stargate
+### [Grupo](https://t.me/Cosmos_Stargate) de Telegram de anuncios de Stargate.
 
 ### Compilando:
 

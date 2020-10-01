@@ -31,7 +31,7 @@ sha256sum genesis.json
 00d8e9c0df367296436854b580d9b069d3f1a5fd@34.123.30.100:26656
 ```
 
-- Resetamos el nodo:
+- Reseteamos el nodo:
 ```sh
 ./gaia/build/gaiad unsafe-reset-all
 ```
@@ -46,7 +46,7 @@ sha256sum genesis.json
 cd /etc/systemd/system
 ```
 
-- Creamos el archivo con `sudo vim gaiad.service` y copiamos dentro _(como siempre cambiad USER por vuestro usuario)_:
+- Creamos el archivo con `sudo vim gaiad.service` y copiamos dentro _(como siempre cambiad `USER` por vuestro usuario)_:
 ```sh
 [Unit]
 Description=Cosmos Gaia Node
@@ -75,7 +75,7 @@ sudo systemctl start gaiad.service
 sudo systemctl enable gaiad.service
 ```
 
-> Podemos ver los logs del nodo con:
+> Podemos ver los logs con:
 ```sh
 sudo journalctl -f -u gaiad.service
 ```
@@ -140,9 +140,10 @@ sudo journalctl -f -u gaiad.service
 
 > Cuando se especifican los parámetros de la comisión, la tasa de cambio máximo de comisión se utiliza para medir el cambio de puntos porcentuales sobre la tasa de comisión. Por ejemplo, del 1% al 2% es un aumento de la tasa del 100%, pero sólo un punto porcentual _(más info en la [documentación oficial](https://hub.cosmos.network/master/validators/validator-setup.html))_. Debe estar entre 0 y la tasa máxima de comisión del validador. No debe exceder la tasa de cambio máxima de comisión del validador, que es el máximo porcentaje de cambio de puntos por día. En otras palabras, un validador sólo puede cambiar su comisión una vez al día y dentro de los límites de la tasa de cambio máxima de comisión.
 
-> Podemos comprobar que nuestro validador está funcionando con:
->
-> `./gaia/build/gaiad query tendermint-validator-set | grep "$(gaia/build/gaiad tendermint show-validator)"`
+- Comprobamos que nuestro validador está funcionando:
+```sh
+./gaia/build/gaiad query tendermint-validator-set | grep "$(gaia/build/gaiad tendermint show-validator)"
+```
 
 - Editando o añadiendo información de nuestro validador:
 ```sh
@@ -169,7 +170,7 @@ sudo journalctl -f -u gaiad.service
 ```sh
 ./gaia/build/gaiad tx slashing unjail \ 
     --from=<key_name> \ 
-	--chain-id=<chain_id> \ 
+    --chain-id=<chain_id> \ 
 ```
 
 > Los validadores son encarcelados _(aka `jailed`)_, es decir, son retirados del conjunto de validadores activos, si no votan en 500 de los últimos 10.000 bloques, o si firman dos veces. Si te encarcelan por tiempo de inactividad, puedes devolver el poder de voto a tu validador.
