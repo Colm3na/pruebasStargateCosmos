@@ -17,11 +17,20 @@ alias gaia="/home/USER/gaia/build/gaiad"
 
 ### [Grupo](https://t.me/Cosmos_Stargate) de Telegram de anuncios de Stargate.
 
+
+### Dependencias:
+
+Necesitamos `Go` instalado, podéis encontrar más información sobre la instalación [aquí](https://github.com/Colm3na/MeetupCosmos), o en su [web oficial](https://golang.org/doc/install).
+
+Para algunas comprobaciones y consultas se usa `jq` _(no es necesario)_:
+```sh
+sudo apt install -y jq 
+```
+
 ### Compilando:
 
 > La última versión es [stargate-3](https://github.com/cosmos/gaia/releases/tag/stargate-3) pero comprobad siempre en el [repositorio oficial](https://github.com/cosmosdevs/stargate#testnet) por si este repositorio se quedara atrasado.
 
-> Necesitamos `Go` instalado, podéis encontrar más información sobre la instalación [aquí](https://github.com/Colm3na/MeetupCosmos), o en su [web oficial](https://golang.org/doc/install).
 ```sh
 #clonamos el repositorio
 git clone https://github.com/cosmos/gaia && cd gaia/
@@ -32,6 +41,30 @@ git checkout stargate-3
 #compilamos
 make build
 ```
+
+> Si obtenemos este error _(más info [aquí](https://github.com/Kava-Labs/kava/issues/656))_:
+> 
+> ```sh
+> go: downloading github.com/zondax/hid v0.9.0
+> go: downloading github.com/mimoo/StrobeGo v0.0.0-20181016162300-f8f6d4d2b643
+> go: downloading gopkg.in/ini.v1 v1.51.0
+> # github.com/zondax/hid
+> ../go/pkg/mod/github.com/zondax/hid@v0.9.0/hid_enabled.go:22:11: fatal error: sys/poll.h: No such file or directory
+>  #include <sys/poll.h>
+>           ^~~~~~~~~~~~
+> compilation terminated.
+> Makefile:79: recipe for target 'install' failed
+> make: *** [install] Error 2
+> ```
+>
+> Podemos solucionarlo instalando `build-essential` y compilando de nuevo:
+> ```sh
+> sudo apt install build-essential -y
+>
+> make clean
+>
+> make install
+> ```
 
 #### Validadores:
 - La información relacionada con los validadores se encuentra en el documento [validadores.md](/validadores/validadores.md).
