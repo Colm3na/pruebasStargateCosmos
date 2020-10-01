@@ -29,7 +29,7 @@ sudo apt install -y jq
 
 ### Compilando:
 
-> La última versión es [stargate-3](https://github.com/cosmos/gaia/releases/tag/stargate-3) pero comprobad siempre en el [repositorio oficial](https://github.com/cosmosdevs/stargate#testnet) por si este repositorio se quedara atrasado.
+> La última versión es [stargate-3](https://github.com/cosmos/gaia/releases/tag/stargate-3) pero comprobad siempre en el [repositorio oficial](https://github.com/cosmosdevs/stargate#testnet) por si este repositorio se quedara atrasado _(última actualización `1-Octubre-2020`)_.
 
 ```sh
 #clonamos el repositorio
