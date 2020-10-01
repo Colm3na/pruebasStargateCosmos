@@ -79,3 +79,4 @@ sudo systemctl enable gaiad.service
 ```sh
 sudo journalctl -f -u gaiad.service
 ```
+

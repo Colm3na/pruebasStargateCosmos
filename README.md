@@ -15,6 +15,8 @@ alias gaia="/home/USER/gaia/build/gaiad"
 
 > Si obtenemos un error parecido a [este](https://github.com/Kava-Labs/kava/issues/656) necesitamos instalar `build-essential` con `sudo apt install -y build-essential`.
 
+### [Grupo](https://t.me/Cosmos_Stargate) de Telegram de anuncios de Stargate
+
 ### Compilando:
 
 > La última versión es [stargate-3](https://github.com/cosmos/gaia/releases/tag/stargate-3) pero comprobad siempre en el [repositorio oficial](https://github.com/cosmosdevs/stargate#testnet) por si este repositorio se quedara atrasado.
