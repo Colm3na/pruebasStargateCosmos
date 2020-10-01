@@ -32,7 +32,7 @@ make build
 ```
 
 #### Validadores:
-- La información relacionada con los validadores se encuentra en el documento [validadores.md](pruebasStargateCosmos/validadores/validadores.md).
+- La información relacionada con los validadores se encuentra en el documento [validadores.md](/validadores/validadores.md).
 
 #### Delegadores:
-- La información relacionada con los delegadores se encuentra en el documento [delegadores.md](/pruebasStargateCosmos/delegadores/delegadores.md).
+- La información relacionada con los delegadores se encuentra en el documento [delegadores.md](/delegadores/delegadores.md).
