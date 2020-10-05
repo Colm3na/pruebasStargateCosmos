@@ -122,7 +122,7 @@ sudo journalctl -f -u gaiad.service
 
 `--moniker=DelegaNetworks` => Nombre de nuestro nodo, se puede modificar después en el archivo situado en `.gaiad/config` con el nombre `config.toml`
 
-`--chain-id=stargate-3a` => Es un identificador único para su cadena. Ayuda a diferenciar entre diferentes cadenas usando la misma versión del software. Podemos comprobarlo con el comando `./gaia/build/gaiad status`
+`--chain-id=stargate-3a` => Es un identificador único para la cadena. Ayuda a diferenciar entre diferentes cadenas usando la misma versión del software. Podemos comprobarlo con el comando `./gaia/build/gaiad status`
 
 `--commission-rate="0.20"` => Comisión del validador _(`0.2` = `2%`)_.
 
@@ -185,6 +185,7 @@ sudo journalctl -f -u gaiad.service
     --type="Text" \
     --deposit="" \
     --from d1 \
+    --chain-id="stargate-3a" \
 ```
 
 `--title="Testing proposal"` => Título de nuestra proposición.
@@ -197,7 +198,7 @@ sudo journalctl -f -u gaiad.service
 
 `--from d1` => Desde la wallet que se realiza la transacción.
 
-
+`--chain-id="stargate-3a"` => Identificador único de cadena en la que se realiza la proposición.
 
 
 > _([FAQ](https://hub.cosmos.network/master/validators/validator-faq.html) de validadores)_
