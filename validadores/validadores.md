@@ -175,4 +175,29 @@ sudo journalctl -f -u gaiad.service
 
 > Los validadores son encarcelados _(aka `jailed`)_, es decir, son retirados del conjunto de validadores activos, si no votan en 500 de los últimos 10.000 bloques, o si firman dos veces. Si te encarcelan por tiempo de inactividad, puedes devolver el poder de voto a tu validador.
 
-_([FAQ](https://hub.cosmos.network/master/validators/validator-faq.html) de validadores)_
+### Gobernanza:
+
+- Cómo subir una propuesta de gobernanza:
+```sh
+./gaia/build/gaiad tx gov submit-proposal \
+    --title="Testing proposal" \
+    --description="First tests with the governance module" \
+    --type="Text" \
+    --deposit="" \
+    --from d1 \
+```
+
+`--title="Testing proposal"` => Título de nuestra proposición.
+
+`--description="First tests with the governance module"` => Descripción de nuestra propuesta.
+
+`--type="Text"` => Tipo de nuestra propuesta _(para más información sobre el tipo ver el [repositorio de Gavin en inglés](https://github.com/gavinly/CosmosParametersWiki/blob/master/Governance.md) o [en español](https://github.com/gavinly/CosmosParametersWiki/blob/master/Governance%5BES_es%5D.md))_.
+
+`--deposit=""` => Depósito para que nuestra proposición entre en período de votación _(más info sobre `mindeposit` [en español](https://github.com/gavinly/CosmosParametersWiki/blob/master/Governance%5BES_es%5D.md#1-depositparams) o [en inglés](https://github.com/gavinly/CosmosParametersWiki/blob/master/Governance.md#1-depositparams))_. 
+
+`--from d1` => Desde la wallet que se realiza la transacción.
+
+
+
+
+> _([FAQ](https://hub.cosmos.network/master/validators/validator-faq.html) de validadores)_
