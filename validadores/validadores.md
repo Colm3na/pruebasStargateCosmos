@@ -200,5 +200,29 @@ sudo journalctl -f -u gaiad.service
 
 `--chain-id="stargate-3a"` => Identificador único de cadena en la que se realiza la proposición.
 
+### Cambios en sintaxis Stargate con respecto a Launchpad (Gobernanza):
+* En la emisión del voto, cambia `no-with-veto` por `no_with_veto`
+* Cuando usamos un fichero `json` para cargar una propuesta cambia también el esquema un poco en el campo `field` en el que se auna `amount` y `denom` para denominarse `deposit`:
+
+```cat proposal2.json 
+{
+  "title": "Param-Change Voting Period",
+  "description": "This is to change the voting time on Testnet to be 8 hours.",
+  "changes": [
+    {
+      "subspace": "gov",
+      "key": "votingparams",
+      "value": {"voting_period":"28800000000000"}
+     }
+    ],
+   "deposit":"10000000bcna"
+}
+```
+El comando para enviar esta propuesta sería: 
+```
+bcnad tx gov submit-proposal param-change proposal2.json --from Pandora  --chain-id bitcanna ```
+
+
+
 
 > _([FAQ](https://hub.cosmos.network/master/validators/validator-faq.html) de validadores)_
