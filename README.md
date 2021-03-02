@@ -1,4 +1,4 @@
-# Repositorio para las pruebas de la testnet Stargate:
+# Repositorio para las pruebas de la testnet Stargate y Cosmoshub4:
 
 > [Este](https://github.com/cosmosdevs/stargate#testnet) es el repositorio oficial de Cosmos con más información.
 
