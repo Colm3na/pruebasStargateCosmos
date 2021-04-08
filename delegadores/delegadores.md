@@ -33,7 +33,7 @@ export GOBIN="$GOPATH/bin"
 ```sh
 git clone https://github.com/cosmos/gaia.git && cd gaia
 
-git checkout v4.0.4
+git checkout v4.2.0
 
 make install
 ```
