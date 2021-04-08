@@ -59,12 +59,12 @@ gaiad keys add d1 --ledger
 
 > Recordad que `1000000uatom=1atom`.
 
-### Delegar *(si tenéis fondos en staking con DelegaNetworks preguntadnos por nuestro nodo)*:
+### Delegar *(si tenéis fondos en staking con DelegaNetworks preguntadnos por nuestro nodo)*. `cosmosvaloper1uut...` es el nodo de DelegaNetworks, cambiadlo por vuestro validador:
 ```sh
 gaiad tx staking delegate cosmosvaloper1uutuwrwt3z2a5z8z3uasml3rftlpmu25aga5c6 1000000uatom --from TUWALLETAQUÍ --chain-id cosmoshub-4 --fees 5000uatom --node <IP>:<PUERTO> -y
 ```
 
-### Comprobar si tenemos rewards:
+### Comprobar si tenemos rewards, como en el caso anterior `cosmosvaloper1uut...` es el validador de DelegaNetworks, y `cosmos1uutu` es la wallet desde la que queremos comprobar si tenemos rewards:
 ```sh
 gaiad query distribution rewards cosmos1uutuwrwt3z2a5z8z3uasml3rftlpmu25cufp5f cosmosvaloper1uutuwrwt3z2a5z8z3uasml3rftlpmu25aga5c6 --node <IP>:<PUERTO> --chain-id cosmoshub-4
 ```
