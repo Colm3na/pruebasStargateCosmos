@@ -30,6 +30,9 @@ export GOBIN="$GOPATH/bin"
 >Recargamos nuestra terminal con `source .bashrc` o `source .profile`
 
 ## Instalamos gaia:
+
+> Comprobad siempre las últimas releases [en su repositorio](https://github.com/cosmos/gaia/releases).
+
 ```sh
 git clone https://github.com/cosmos/gaia.git && cd gaia
 
